@@ -1,0 +1,2 @@
+C:\Users\Jenna\AppData\Local\Temporary Projects\GrandyJ_A10\bin\Debug\GrandyJ_A10.exe.config
+F:\CS 3630\HW\GrandyJ_A10\bin\Debug\GrandyJ_A10.exe.config
