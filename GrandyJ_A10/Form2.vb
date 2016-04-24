@@ -36,7 +36,7 @@
 
    End Sub
 
-   Private Sub CancelButton_Click(sender As Object, e As EventArgs) Handles CancelButton.Click
+   Private Sub cnclButton_Click(sender As Object, e As EventArgs) Handles cnclButton.Click
       Close()
    End Sub
 End Class
