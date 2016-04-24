@@ -83,34 +83,34 @@ Partial Class Form2
       Me.txtHost.Size = New System.Drawing.Size(151, 20)
       Me.txtHost.TabIndex = 5
       '
-      'AcceptButton
+      'okButton
       '
-      Me.AcceptButton.Location = New System.Drawing.Point(201, 289)
-      Me.AcceptButton.Name = "AcceptButton"
-      Me.AcceptButton.Size = New System.Drawing.Size(75, 23)
-      Me.AcceptButton.TabIndex = 6
-      Me.AcceptButton.Text = "OK"
-      Me.AcceptButton.UseVisualStyleBackColor = True
+      Me.okButton.Location = New System.Drawing.Point(201, 289)
+      Me.okButton.Name = "okButton"
+      Me.okButton.Size = New System.Drawing.Size(75, 23)
+      Me.okButton.TabIndex = 6
+      Me.okButton.Text = "OK"
+      Me.okButton.UseVisualStyleBackColor = True
       '
-      'CancelButton
+      'cnclButton
       '
-      Me.CancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
-      Me.CancelButton.Location = New System.Drawing.Point(371, 289)
-      Me.CancelButton.Name = "CancelButton"
-      Me.CancelButton.Size = New System.Drawing.Size(75, 23)
-      Me.CancelButton.TabIndex = 7
-      Me.CancelButton.Text = "Cancel"
-      Me.CancelButton.UseVisualStyleBackColor = True
+      Me.cnclButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
+      Me.cnclButton.Location = New System.Drawing.Point(371, 289)
+      Me.cnclButton.Name = "cnclButton"
+      Me.cnclButton.Size = New System.Drawing.Size(75, 23)
+      Me.cnclButton.TabIndex = 7
+      Me.cnclButton.Text = "Cancel"
+      Me.cnclButton.UseVisualStyleBackColor = True
       '
       'Form2
       '
-      Me.AcceptButton = Me.AcceptButton
+      Me.AcceptButton = Me.okButton
       Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
       Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-      Me.CancelButton = Me.CancelButton
+      Me.CancelButton = Me.cnclButton
       Me.ClientSize = New System.Drawing.Size(670, 404)
-      Me.Controls.Add(Me.CancelButton)
-      Me.Controls.Add(Me.AcceptButton)
+      Me.Controls.Add(Me.cnclButton)
+      Me.Controls.Add(Me.okButton)
       Me.Controls.Add(Me.txtHost)
       Me.Controls.Add(Me.txtPassword)
       Me.Controls.Add(Me.txtUsername)
@@ -131,6 +131,6 @@ Partial Class Form2
    Friend WithEvents txtUsername As TextBox
    Friend WithEvents txtPassword As TextBox
    Friend WithEvents txtHost As TextBox
-   Friend WithEvents CancelButton As Button
-   Friend WithEvents AcceptButton As System.Windows.Forms.Button
+   Friend WithEvents cnclButton As Button
+   Friend WithEvents okButton As System.Windows.Forms.Button
 End Class
