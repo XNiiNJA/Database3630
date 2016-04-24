@@ -1,2 +1,13 @@
 C:\Users\Jenna\AppData\Local\Temporary Projects\GrandyJ_A10\bin\Debug\GrandyJ_A10.exe.config
 F:\CS 3630\HW\GrandyJ_A10\bin\Debug\GrandyJ_A10.exe.config
+J:\Spring_2016\CS_3630_Database\Database3630\trunk\GrandyJ_A10\bin\Debug\GrandyJ_A10.exe.config
+J:\Spring_2016\CS_3630_Database\Database3630\trunk\GrandyJ_A10\obj\Debug\GrandyJ_A10.Form1.resources
+J:\Spring_2016\CS_3630_Database\Database3630\trunk\GrandyJ_A10\obj\Debug\GrandyJ_A10.Form2.resources
+J:\Spring_2016\CS_3630_Database\Database3630\trunk\GrandyJ_A10\obj\Debug\GrandyJ_A10.Resources.resources
+J:\Spring_2016\CS_3630_Database\Database3630\trunk\GrandyJ_A10\obj\Debug\GrandyJ_A10.vbproj.GenerateResource.Cache
+J:\Spring_2016\CS_3630_Database\Database3630\trunk\GrandyJ_A10\bin\Debug\GrandyJ_A10.exe
+J:\Spring_2016\CS_3630_Database\Database3630\trunk\GrandyJ_A10\bin\Debug\GrandyJ_A10.pdb
+J:\Spring_2016\CS_3630_Database\Database3630\trunk\GrandyJ_A10\bin\Debug\GrandyJ_A10.xml
+J:\Spring_2016\CS_3630_Database\Database3630\trunk\GrandyJ_A10\obj\Debug\GrandyJ_A10.exe
+J:\Spring_2016\CS_3630_Database\Database3630\trunk\GrandyJ_A10\obj\Debug\GrandyJ_A10.xml
+J:\Spring_2016\CS_3630_Database\Database3630\trunk\GrandyJ_A10\obj\Debug\GrandyJ_A10.pdb

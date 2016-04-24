@@ -13,9 +13,9 @@
 
     Public Shared Sub LogInAtRunTime()
 
-        UserName = "yangq"
-        PassWd = "CS3630"
-        Server = "EDDB"
+      'UserName = "yangq"
+      'PassWd = "CS3630"
+      'Server = "EDDB"
 
         myOracleConnection.ConnectionString = "user id=" & UserName & ";data source=" & Server &
                                               ";password=" & PassWd & ";persist security info=False"
@@ -31,8 +31,9 @@
     End Sub
 
     Public Shared Sub main()
-        LogInAtRunTime()
+      'LogInAtRunTime()
 
-        Application.Run(New Form1)
+      Application.Run(New Form2)
+
     End Sub
 End Class
