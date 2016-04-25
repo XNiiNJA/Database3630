@@ -50,7 +50,6 @@
 
       Oracle.myOracleCommand.CommandText = "Select * from booking"
 
-
       Try
          Oracle.myTable.Clear()
          Oracle.myOracleDataAdapter.Fill(Oracle.myTable)
