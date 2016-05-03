@@ -1,0 +1,2 @@
+C:\Users\grandyj\AppData\Local\Temporary Projects\GrandyJ\bin\Debug\GrandyJ.exe.config
+E:\CS 3630\Project\GrandyJ\bin\Debug\GrandyJ.exe.config
