@@ -793,8 +793,10 @@ Partial Class Form2
       '
       'Form2
       '
+      Me.AcceptButton = Me.searchBtn
       Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
       Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+      Me.CancelButton = Me.exitBtn
       Me.ClientSize = New System.Drawing.Size(814, 614)
       Me.Controls.Add(Me.searchBtn)
       Me.Controls.Add(Me.allBtn)
