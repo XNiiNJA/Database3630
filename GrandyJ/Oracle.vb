@@ -1,39 +1,57 @@
-﻿Public Class Oracle
+Public Class Oracle
    Friend Shared UserName As String
    Friend Shared PassWd As String
    Friend Shared Server As String
 
-   ' Make sure to add reference to System.Data.OracleClient
-   Friend Shared myOracleDataAdapter As New System.Data.OracleClient.OracleDataAdapter
-   Friend Shared myOracleCommand As New System.Data.OracleClient.OracleCommand
-   Friend Shared myOracleConnection As New System.Data.OracleClient.OracleConnection
-   Friend Shared myOracleCommandBuilder As System.Data.OracleClient.OracleCommandBuilder
+   Friend Shared myConnection As New System.Data.OleDb.OleDbConnection
 
-   Friend Shared myTable As New System.Data.DataTable
+   Friend Shared staffAdapter As New System.Data.OleDb.OleDbDataAdapter
+   Friend Shared staffCommand As New System.Data.OleDb.OleDbCommand
+   Friend Shared staffBuilder As System.Data.OleDb.OleDbCommandBuilder
+   Friend Shared staffTable As New System.Data.DataTable()
+
+   Friend Shared qualsAdapter As New System.Data.OleDb.OleDbDataAdapter
+   Friend Shared qualsCommand As New System.Data.OleDb.OleDbCommand
+   Friend Shared qualsBuilder As System.Data.OleDb.OleDbCommandBuilder
+   Friend Shared qualsTable As New System.Data.DataTable()
+
+   Friend Shared workExpAdapter As New System.Data.OleDb.OleDbDataAdapter
+   Friend Shared workExpCommand As New System.Data.OleDb.OleDbCommand
+   Friend Shared workExpBuilder As System.Data.OleDb.OleDbCommandBuilder
+   Friend Shared workExpTable As New System.Data.DataTable()
 
    Public Shared Sub LogInAtRunTime()
 
-      'UserName = "yangq"
-      'PassWd = "CS3630"
-      'Server = "EDDB"
+   myConnection.ConnectionString = "user id=" & UserName & ";data source=" & Server &
+                                    ";password=" & PassWd & ";persist security info=False"
 
-      myOracleConnection.ConnectionString = "user id=" & UserName & ";data source=" & Server &
-                                            ";password=" & PassWd & ";persist security info=False"
+   staffCommand.CommandType = CommandType.Text
+   staffCommand.CommandText = "Select * from uwp_staff"
+   staffCommand.Connection = myConnection
 
-      myOracleCommand.CommandType = CommandType.Text
-      myOracleCommand.CommandText = "Select * from booking"
-      myOracleCommand.Connection = myOracleConnection
+   staffAdapter.SelectCommand = staffCommand
+   staffBuilder = New System.Data.OleDb.OleDbCommandBuilder(staffAdapter)
+   staffAdapter.Fill(staffTable)
 
-      myOracleDataAdapter.SelectCommand = myOracleCommand
-      myOracleCommandBuilder = New System.Data.OracleClient.OracleCommandBuilder(myOracleDataAdapter)
+   qualsCommand.CommandType = CommandType.Text
+   qualsCommand.CommandText = "Select * from uwp_qualifications"
+   qualsCommand.Connection = myConnection
 
-      myOracleDataAdapter.Fill(myTable)
+   qualsAdapter.SelectCommand = qualsCommand
+   qualsBuilder = New System.Data.OleDb.OleDbCommandBuilder(qualsAdapter)
+   qualsAdapter.Fill(qualsTable)
+
+   workExpCommand.CommandType = CommandType.Text
+   workExpCommand.CommandText = "Select * from uwp_workexperience"
+   workExpCommand.Connection = myConnection
+
+   workExpAdapter.SelectCommand = workExpCommand
+   workExpBuilder = New System.Data.OleDb.OleDbCommandBuilder(workExpAdapter)
+   workExpAdapter.Fill(workExpTable)
    End Sub
 
    Public Shared Sub main()
-      'LogInAtRunTime()
-
-      Application.Run(New Form1)
+         Application.Run(New Form1)
 
    End Sub
 End Class
