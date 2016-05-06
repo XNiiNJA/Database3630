@@ -1,2 +1,13 @@
 C:\Users\grandyj\AppData\Local\Temporary Projects\GrandyJ\bin\Debug\GrandyJ.exe.config
 E:\CS 3630\Project\GrandyJ\bin\Debug\GrandyJ.exe.config
+J:\Spring_2016\CS_3630_Database\Database3630\trunk\GrandyJ\bin\Debug\GrandyJ.exe.config
+J:\Spring_2016\CS_3630_Database\Database3630\trunk\GrandyJ\obj\Debug\GrandyJ.Form1.resources
+J:\Spring_2016\CS_3630_Database\Database3630\trunk\GrandyJ\obj\Debug\GrandyJ.Form2.resources
+J:\Spring_2016\CS_3630_Database\Database3630\trunk\GrandyJ\obj\Debug\GrandyJ.Resources.resources
+J:\Spring_2016\CS_3630_Database\Database3630\trunk\GrandyJ\obj\Debug\GrandyJ.vbproj.GenerateResource.Cache
+J:\Spring_2016\CS_3630_Database\Database3630\trunk\GrandyJ\bin\Debug\GrandyJ.exe
+J:\Spring_2016\CS_3630_Database\Database3630\trunk\GrandyJ\bin\Debug\GrandyJ.pdb
+J:\Spring_2016\CS_3630_Database\Database3630\trunk\GrandyJ\bin\Debug\GrandyJ.xml
+J:\Spring_2016\CS_3630_Database\Database3630\trunk\GrandyJ\obj\Debug\GrandyJ.exe
+J:\Spring_2016\CS_3630_Database\Database3630\trunk\GrandyJ\obj\Debug\GrandyJ.xml
+J:\Spring_2016\CS_3630_Database\Database3630\trunk\GrandyJ\obj\Debug\GrandyJ.pdb

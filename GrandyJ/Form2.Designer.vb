@@ -56,7 +56,6 @@ Partial Class Form2
       Me.hrsperwkTxt = New System.Windows.Forms.TextBox()
       Me.pospermtempTxt = New System.Windows.Forms.TextBox()
       Me.typepayTxt = New System.Windows.Forms.TextBox()
-      Me.dobComboBox = New System.Windows.Forms.ComboBox()
       Me.empInfoFirstPageBtn = New System.Windows.Forms.Button()
       Me.empInfoPrevPageBtn = New System.Windows.Forms.Button()
       Me.empInfoNextPageBtn = New System.Windows.Forms.Button()
@@ -68,7 +67,6 @@ Partial Class Form2
       Me.exitBtn = New System.Windows.Forms.Button()
       Me.qualsLbl = New System.Windows.Forms.Label()
       Me.qualdateLbl = New System.Windows.Forms.Label()
-      Me.qualdateComboBox = New System.Windows.Forms.ComboBox()
       Me.qualtypeLbl = New System.Windows.Forms.Label()
       Me.qualtypeTxt = New System.Windows.Forms.TextBox()
       Me.instnameLbl = New System.Windows.Forms.Label()
@@ -81,15 +79,13 @@ Partial Class Form2
       Me.workExpLbl = New System.Windows.Forms.Label()
       Me.orgnameTxt = New System.Windows.Forms.TextBox()
       Me.workExpPositionTxt = New System.Windows.Forms.TextBox()
-      Me.startdateComboBox = New System.Windows.Forms.ComboBox()
-      Me.enddateComboBox = New System.Windows.Forms.ComboBox()
       Me.qualsNewBtn = New System.Windows.Forms.Button()
       Me.qualsSaveBtn = New System.Windows.Forms.Button()
       Me.qualsDeleteBtn = New System.Windows.Forms.Button()
       Me.workExpDeleteBtn = New System.Windows.Forms.Button()
       Me.workExpSaveBtn = New System.Windows.Forms.Button()
       Me.workExpNewBtn = New System.Windows.Forms.Button()
-      Me.TextBox1 = New System.Windows.Forms.TextBox()
+      Me.workExpPageNumTxt = New System.Windows.Forms.TextBox()
       Me.workExpLastPageBtn = New System.Windows.Forms.Button()
       Me.workExpNextPageBtn = New System.Windows.Forms.Button()
       Me.workExpPrevPageBtn = New System.Windows.Forms.Button()
@@ -104,6 +100,10 @@ Partial Class Form2
       Me.fieldComboBox = New System.Windows.Forms.ComboBox()
       Me.allBtn = New System.Windows.Forms.Button()
       Me.searchBtn = New System.Windows.Forms.Button()
+      Me.dtpDOB = New System.Windows.Forms.DateTimePicker()
+      Me.dtpQualdate = New System.Windows.Forms.DateTimePicker()
+      Me.dtpStartDate = New System.Windows.Forms.DateTimePicker()
+      Me.dtpEndDate = New System.Windows.Forms.DateTimePicker()
       Me.SuspendLayout()
       '
       'empInfoLbl
@@ -380,14 +380,6 @@ Partial Class Form2
       Me.typepayTxt.Size = New System.Drawing.Size(220, 20)
       Me.typepayTxt.TabIndex = 33
       '
-      'dobComboBox
-      '
-      Me.dobComboBox.FormattingEnabled = True
-      Me.dobComboBox.Location = New System.Drawing.Point(156, 247)
-      Me.dobComboBox.Name = "dobComboBox"
-      Me.dobComboBox.Size = New System.Drawing.Size(220, 21)
-      Me.dobComboBox.TabIndex = 34
-      '
       'empInfoFirstPageBtn
       '
       Me.empInfoFirstPageBtn.Location = New System.Drawing.Point(142, 482)
@@ -460,6 +452,7 @@ Partial Class Form2
       '
       'exitBtn
       '
+      Me.exitBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel
       Me.exitBtn.Location = New System.Drawing.Point(382, 574)
       Me.exitBtn.Name = "exitBtn"
       Me.exitBtn.Size = New System.Drawing.Size(75, 23)
@@ -484,14 +477,6 @@ Partial Class Form2
       Me.qualdateLbl.Size = New System.Drawing.Size(68, 13)
       Me.qualdateLbl.TabIndex = 45
       Me.qualdateLbl.Text = "QUALDATE:"
-      '
-      'qualdateComboBox
-      '
-      Me.qualdateComboBox.FormattingEnabled = True
-      Me.qualdateComboBox.Location = New System.Drawing.Point(560, 40)
-      Me.qualdateComboBox.Name = "qualdateComboBox"
-      Me.qualdateComboBox.Size = New System.Drawing.Size(220, 21)
-      Me.qualdateComboBox.TabIndex = 46
       '
       'qualtypeLbl
       '
@@ -591,22 +576,6 @@ Partial Class Form2
       Me.workExpPositionTxt.Size = New System.Drawing.Size(220, 20)
       Me.workExpPositionTxt.TabIndex = 58
       '
-      'startdateComboBox
-      '
-      Me.startdateComboBox.FormattingEnabled = True
-      Me.startdateComboBox.Location = New System.Drawing.Point(560, 330)
-      Me.startdateComboBox.Name = "startdateComboBox"
-      Me.startdateComboBox.Size = New System.Drawing.Size(220, 21)
-      Me.startdateComboBox.TabIndex = 59
-      '
-      'enddateComboBox
-      '
-      Me.enddateComboBox.FormattingEnabled = True
-      Me.enddateComboBox.Location = New System.Drawing.Point(560, 357)
-      Me.enddateComboBox.Name = "enddateComboBox"
-      Me.enddateComboBox.Size = New System.Drawing.Size(220, 21)
-      Me.enddateComboBox.TabIndex = 60
-      '
       'qualsNewBtn
       '
       Me.qualsNewBtn.Location = New System.Drawing.Point(466, 155)
@@ -661,12 +630,12 @@ Partial Class Form2
       Me.workExpNewBtn.Text = "New"
       Me.workExpNewBtn.UseVisualStyleBackColor = True
       '
-      'TextBox1
+      'workExpPageNumTxt
       '
-      Me.TextBox1.Location = New System.Drawing.Point(553, 397)
-      Me.TextBox1.Name = "TextBox1"
-      Me.TextBox1.Size = New System.Drawing.Size(60, 20)
-      Me.TextBox1.TabIndex = 68
+      Me.workExpPageNumTxt.Location = New System.Drawing.Point(553, 397)
+      Me.workExpPageNumTxt.Name = "workExpPageNumTxt"
+      Me.workExpPageNumTxt.Size = New System.Drawing.Size(60, 20)
+      Me.workExpPageNumTxt.TabIndex = 68
       '
       'workExpLastPageBtn
       '
@@ -791,6 +760,42 @@ Partial Class Form2
       Me.searchBtn.Text = "Search"
       Me.searchBtn.UseVisualStyleBackColor = True
       '
+      'dtpDOB
+      '
+      Me.dtpDOB.CustomFormat = "M/d/yyyy"
+      Me.dtpDOB.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+      Me.dtpDOB.Location = New System.Drawing.Point(156, 248)
+      Me.dtpDOB.Name = "dtpDOB"
+      Me.dtpDOB.Size = New System.Drawing.Size(220, 20)
+      Me.dtpDOB.TabIndex = 82
+      '
+      'dtpQualdate
+      '
+      Me.dtpQualdate.CustomFormat = "M/d/yyyy"
+      Me.dtpQualdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+      Me.dtpQualdate.Location = New System.Drawing.Point(560, 40)
+      Me.dtpQualdate.Name = "dtpQualdate"
+      Me.dtpQualdate.Size = New System.Drawing.Size(220, 20)
+      Me.dtpQualdate.TabIndex = 83
+      '
+      'dtpStartDate
+      '
+      Me.dtpStartDate.CustomFormat = "M/d/yyyy"
+      Me.dtpStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+      Me.dtpStartDate.Location = New System.Drawing.Point(560, 331)
+      Me.dtpStartDate.Name = "dtpStartDate"
+      Me.dtpStartDate.Size = New System.Drawing.Size(220, 20)
+      Me.dtpStartDate.TabIndex = 84
+      '
+      'dtpEndDate
+      '
+      Me.dtpEndDate.CustomFormat = "M/d/yyyy"
+      Me.dtpEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+      Me.dtpEndDate.Location = New System.Drawing.Point(560, 359)
+      Me.dtpEndDate.Name = "dtpEndDate"
+      Me.dtpEndDate.Size = New System.Drawing.Size(220, 20)
+      Me.dtpEndDate.TabIndex = 85
+      '
       'Form2
       '
       Me.AcceptButton = Me.searchBtn
@@ -798,6 +803,10 @@ Partial Class Form2
       Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
       Me.CancelButton = Me.exitBtn
       Me.ClientSize = New System.Drawing.Size(814, 614)
+      Me.Controls.Add(Me.dtpEndDate)
+      Me.Controls.Add(Me.dtpStartDate)
+      Me.Controls.Add(Me.dtpQualdate)
+      Me.Controls.Add(Me.dtpDOB)
       Me.Controls.Add(Me.searchBtn)
       Me.Controls.Add(Me.allBtn)
       Me.Controls.Add(Me.fieldComboBox)
@@ -811,7 +820,7 @@ Partial Class Form2
       Me.Controls.Add(Me.workExpDeleteBtn)
       Me.Controls.Add(Me.workExpSaveBtn)
       Me.Controls.Add(Me.workExpNewBtn)
-      Me.Controls.Add(Me.TextBox1)
+      Me.Controls.Add(Me.workExpPageNumTxt)
       Me.Controls.Add(Me.workExpLastPageBtn)
       Me.Controls.Add(Me.workExpNextPageBtn)
       Me.Controls.Add(Me.workExpPrevPageBtn)
@@ -819,8 +828,6 @@ Partial Class Form2
       Me.Controls.Add(Me.qualsDeleteBtn)
       Me.Controls.Add(Me.qualsSaveBtn)
       Me.Controls.Add(Me.qualsNewBtn)
-      Me.Controls.Add(Me.enddateComboBox)
-      Me.Controls.Add(Me.startdateComboBox)
       Me.Controls.Add(Me.workExpPositionTxt)
       Me.Controls.Add(Me.orgnameTxt)
       Me.Controls.Add(Me.workExpLbl)
@@ -833,7 +840,6 @@ Partial Class Form2
       Me.Controls.Add(Me.instnameLbl)
       Me.Controls.Add(Me.qualtypeTxt)
       Me.Controls.Add(Me.qualtypeLbl)
-      Me.Controls.Add(Me.qualdateComboBox)
       Me.Controls.Add(Me.qualdateLbl)
       Me.Controls.Add(Me.qualsLbl)
       Me.Controls.Add(Me.exitBtn)
@@ -845,7 +851,6 @@ Partial Class Form2
       Me.Controls.Add(Me.empInfoNextPageBtn)
       Me.Controls.Add(Me.empInfoPrevPageBtn)
       Me.Controls.Add(Me.empInfoFirstPageBtn)
-      Me.Controls.Add(Me.dobComboBox)
       Me.Controls.Add(Me.typepayTxt)
       Me.Controls.Add(Me.pospermtempTxt)
       Me.Controls.Add(Me.hrsperwkTxt)
@@ -881,7 +886,7 @@ Partial Class Form2
       Me.Controls.Add(Me.staffnoLbl)
       Me.Controls.Add(Me.empInfoLbl)
       Me.Name = "Form2"
-      Me.Text = "Form2"
+      Me.Text = "CS3630 GrandyJ OberhauserG"
       Me.ResumeLayout(False)
       Me.PerformLayout()
 
@@ -920,7 +925,6 @@ Partial Class Form2
    Friend WithEvents hrsperwkTxt As System.Windows.Forms.TextBox
    Friend WithEvents pospermtempTxt As System.Windows.Forms.TextBox
    Friend WithEvents typepayTxt As System.Windows.Forms.TextBox
-   Friend WithEvents dobComboBox As System.Windows.Forms.ComboBox
    Friend WithEvents empInfoFirstPageBtn As System.Windows.Forms.Button
    Friend WithEvents empInfoPrevPageBtn As System.Windows.Forms.Button
    Friend WithEvents empInfoNextPageBtn As System.Windows.Forms.Button
@@ -932,7 +936,6 @@ Partial Class Form2
    Friend WithEvents exitBtn As System.Windows.Forms.Button
    Friend WithEvents qualsLbl As System.Windows.Forms.Label
    Friend WithEvents qualdateLbl As System.Windows.Forms.Label
-   Friend WithEvents qualdateComboBox As System.Windows.Forms.ComboBox
    Friend WithEvents qualtypeLbl As System.Windows.Forms.Label
    Friend WithEvents qualtypeTxt As System.Windows.Forms.TextBox
    Friend WithEvents instnameLbl As System.Windows.Forms.Label
@@ -945,15 +948,13 @@ Partial Class Form2
    Friend WithEvents workExpLbl As System.Windows.Forms.Label
    Friend WithEvents orgnameTxt As System.Windows.Forms.TextBox
    Friend WithEvents workExpPositionTxt As System.Windows.Forms.TextBox
-   Friend WithEvents startdateComboBox As System.Windows.Forms.ComboBox
-   Friend WithEvents enddateComboBox As System.Windows.Forms.ComboBox
    Friend WithEvents qualsNewBtn As System.Windows.Forms.Button
    Friend WithEvents qualsSaveBtn As System.Windows.Forms.Button
    Friend WithEvents qualsDeleteBtn As System.Windows.Forms.Button
    Friend WithEvents workExpDeleteBtn As System.Windows.Forms.Button
    Friend WithEvents workExpSaveBtn As System.Windows.Forms.Button
    Friend WithEvents workExpNewBtn As System.Windows.Forms.Button
-   Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+   Friend WithEvents workExpPageNumTxt As System.Windows.Forms.TextBox
    Friend WithEvents workExpLastPageBtn As System.Windows.Forms.Button
    Friend WithEvents workExpNextPageBtn As System.Windows.Forms.Button
    Friend WithEvents workExpPrevPageBtn As System.Windows.Forms.Button
@@ -968,4 +969,8 @@ Partial Class Form2
    Friend WithEvents fieldComboBox As System.Windows.Forms.ComboBox
    Friend WithEvents allBtn As System.Windows.Forms.Button
    Friend WithEvents searchBtn As System.Windows.Forms.Button
+   Friend WithEvents dtpDOB As System.Windows.Forms.DateTimePicker
+   Friend WithEvents dtpQualdate As System.Windows.Forms.DateTimePicker
+   Friend WithEvents dtpStartDate As System.Windows.Forms.DateTimePicker
+   Friend WithEvents dtpEndDate As System.Windows.Forms.DateTimePicker
 End Class
